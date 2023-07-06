@@ -1,0 +1,23 @@
+/*photo de profil*/
+.profileM{ width :150px;
+    height : 150px;
+   
+-moz-border-radius : 125px;
+    -webkit-border-radius : 125px;
+    border-radius : 125px; 
+margin-top: 50px; 
+margin-left: auto ;} 
+.photoPr{ font-family: 'Franklin Gothic Medium'; font-size: medium;}
+.name{margin-left:100px;margin-Right:100px; font-family:Verdana; font-weight: bolder; font-size: 40px;}
+/*description du profil*/
+.description{ margin-top: 50px; border-radius: 5px; margin-left: 100px; width: 400px; height: 80px; font-style: normal; border-color:#3795d1 ;
+border-width: 2px;}
+/*lieu, telephone and email*/
+.information{display: flex; justify-content: space-between; margin-top: 50px;}
+.lieu{display: flex; flex-direction: column;}
+.adresse{width: 70px; height: 70px; margin-left: 80px;}
+.addressedescrip{margin-left: 20px; width: 250px; height: 70px;margin-right: 20px;; border-radius: 5px;border-color:#3795d1 ;border-width: 2px;}
+.addressCabinet{font-family:Verdana; font-weight: bolder; font-size: 25px;margin-right: 50px; margin-left: 55px;}
+/*buutton submit*/
+.submit1{width: 150px; height: 100px;  margin: 50px;}
+select, h3{margin-left:200px;margin-Right:200px}

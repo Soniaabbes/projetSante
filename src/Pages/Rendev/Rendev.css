@@ -1,0 +1,12 @@
+
+#rdv{width:100px; height:100px}
+.rendev{display: flex; justify-content: space-between; width: 100px;}
+.navbar2{color:#00a8dc; font-weight: bolder; font-size:xx-large; font-family: 'Trebuchet MS';}
+.bookRdv{ width:100% ; height: 350px;background-image: url("https://www.conseil-national.medecin.fr/sites/default/files/images/adobestock_84405047_2.jpeg");}
+.modifierRDV{width:330px;
+	height:200px; border-color: #00a8dc; border-style: solid;border-radius: 20px; display: flex;}
+    #horloge{height: 150px; width: 150px;}
+    #patient{height: 150px; width: 150px;}
+    .RDVmod{display: flex; justify-content: space-between; margin-left: 200px; margin-right: 200px; margin-top: 25px;}
+    .title1{color:#26abe3; font-weight: bold; font-size: larger; font-family: 'Trebuchet MS';}
+    .parag2{ font-weight: bold; font-size: large; font-family: 'Trebuchet MS';}

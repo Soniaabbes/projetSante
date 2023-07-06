@@ -1,0 +1,22 @@
+#navbarScrollingDropdown{margin-left: 200px;}
+/*navbar*/
+.logo {
+ 
+    
+    height: 65px;
+  
+    width: 105px;
+}
+.navIcon{font-size: 30px; font-weight: bolder;}
+#button {
+    padding: 1em;
+
+    border: 1px solid #EEFCF8;
+    border-radius: 5em;
+    
+    background-color: #98c0d9;
+
+    color: #EEFCF8;
+    font-weight: bold;
+    text-decoration: none;
+}
