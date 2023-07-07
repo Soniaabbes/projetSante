@@ -14,9 +14,9 @@ function CardRdvuser() {
     const dispatch = useDispatch()
     const rdvs = useSelector((state) => state.rdv.userRDV.rdv);
     useEffect(() => {
-      console.log(rdvs)
+      
         dispatch(getRDVDoc(oneUser._id));
-    }, [dispatch])
+    },[dispatch,oneUser._id])
     const selectedRdv = useSelector((state) => state.rdv.rdvOne);
    
     // const [data, setData] = useState({
@@ -33,33 +33,37 @@ function CardRdvuser() {
 
 
     const handEdit = async () => {
- console.log( user ?.email)
- const data={...selectedRdv,  emailPa: user ?.email,
+
+ const data={...selectedRdv,emailPa: user?.email,
     valide: false}
 
 ;
         const payload = {
-            id: selectedRdv ?._id, data
+            id: selectedRdv?._id, data
             
         }
-        dispatch(updateAppoinment(payload));
+       
+        dispatch(updateAppoinment(payload),
+        window.location.reload())
+       
     
 
-         if (data ?.emailPa === user ?.email && data ?.valide === false) {
+         if (data?.emailPa=== user?.email && data?.valide === false) {
           console.log(selectedRdv,"body")
             const data = {
-                email: user ?.email,
-                docteurname: selectedRdv ?.docteurname,
-                jour: selectedRdv ?.jour,
-                heureStart: selectedRdv ?.heureStart,
-                heureEnd: selectedRdv ?.heureEnd
+                email: user?.email,
+                docteurname:selectedRdv?.docteurname,
+                jour: selectedRdv?.jour,
+                heureStart: selectedRdv?.heureStart,
+                heureEnd: selectedRdv?.heureEnd
             }
             dispatch(sendConfirmationEmail(data));
          }
     }
 
 
-    return (
+    return (<div>
+        <h2>Les rendez-vous qui auront lieu cette semaine:</h2>
         <div style={{"display":'flex', "justifyContent":"space-between","flexWrap":'wrap', "marginTop":"25px","padding":"25px"}}>
 
 
@@ -68,7 +72,7 @@ function CardRdvuser() {
        
          
                 {
-                rdvs?. map(rdv => 
+                rdvs?.map(rdv => 
                     <Card style={{ width: '25rem', "margin":"10px" }}>
 
                     <img src="https://cdn-icons-png.flaticon.com/256/5351/5351099.png" alt="Person" className="card__image"/>
@@ -79,14 +83,14 @@ function CardRdvuser() {
                                 <span className='coordonnesRDM'>nom du médecin:</span>
                                 <span className='coordonnesRM'>
                                     {
-                                    rdv ?. docteurname
+                                    rdv?.docteurname
                                 }</span>
                             </p>
                             <p>
                                 <span className='coordonnesRDM'>email du médecin:</span>
                                 <span className='coordonnesRM'>
                                     {
-                                    rdv ?. emailDoc
+                                    rdv?.emailDoc
                                 }</span>
                             </p>
                             <p>
@@ -96,19 +100,19 @@ function CardRdvuser() {
                                 <span className='coordonnesRDM'>jour:</span>
                                 <span className='coordonnesRM'>
                                     {
-                                    rdv ?. jour
+                                    rdv?.jour
                                 }</span>
                             </p>
                             <p>
                                 <span className='coordonnesRDM'>de</span>
                                 <span className='coordonnesRM'>
                                     {
-                                    rdv ?. heureStart
+                                    rdv?.heureStart
                                 } </span>
                                 <span className='coordonnesRDM'>à</span>
                                 <span className='coordonnesRM'>
                                     {
-                                    rdv ?. heureEnd
+                                    rdv?.heureEnd
                                 }</span>
                             </p>
 
@@ -134,6 +138,7 @@ function CardRdvuser() {
             } 
         
 
+        </div>
         </div>
     )
 }

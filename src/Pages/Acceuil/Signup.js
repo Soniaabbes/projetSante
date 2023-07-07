@@ -32,12 +32,12 @@ function Signup() {
                     <label>
                         Email:
                         <br/>
-                        <input name='email' onChange={handleChange}/>
+                        <input  name='email' onChange={handleChange}/>
                     </label>
                     <label>
                         Password:
                         <br/>
-                        <input name='password' onChange={handleChange}/>
+                        <input name='password'   type='password'onChange={handleChange}/>
                     </label>
                     <label>
                         you are:

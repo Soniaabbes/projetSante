@@ -36,6 +36,7 @@ import CardAllProduct from './Pages/CardduRendezVous/CardAllProduct';
 import CardCommercialUser from './Pages/CardduRendezVous/CardCommercialUser';
 import CardProductAdmin from './Pages/CardAllUsers/CardProductAdmin';
 import Paiement from './Pages/Paiement';
+import Footer from './Pages/Footer/Footer';
 
 
 
@@ -71,7 +72,9 @@ function App() {
                         }/>
                     <Route path='/chercheMed'
                         element={<Trouvezmed/>}/>
-                        <Route path='/planningMed' element={ <CardRdvuser/>} />
+                      
+                        <Route path='/planningMed' element={ <PrivateRoutes><CardRdvuser/></PrivateRoutes>} />
+                       
                     <Route path='/profilPatient'
                         element={
                             <PrivateRoutes><ProfilPatient/></PrivateRoutes>
@@ -116,6 +119,7 @@ function App() {
                         <Route path='/paiementEnLigne' element={<Paiement/>}/>
 
                 </Routes>
+                <Footer/>
                 
 
                 <ToastContainer position="top-right"

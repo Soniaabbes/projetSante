@@ -1,17 +1,16 @@
-.div1{ background-color:#d9f6f6 ; border-radius: 10px;}
+.div1{ background-color:#98bbd9 ; border-radius: 10px;}
 .Apropos{display: flex;
      justify-content: space-between;
-      margin-right: 200px; margin-left: 150px; margin-top:150px;;}
+      margin-right: 200px; margin-left: 0px; }
 .Together{font-size: 40px; font-weight: 700; color: white;}
 .familleM{width: 500px;height: 400px;}
 .can{font-size: 40px; font-weight: 700; color: white;}
 /*div2*/
-.div2{display: flex; justify-content: space-around; margin-top: 100px ; background-color: #f3f1ef; border-radius: 10px;}
-.patientDoc{display: flex;flex-direction: column;
-  
-}
-.patient { width: 220px; height: 220px; background-color: #00ccb1 ; padding: 20px;border-radius: 300px; color: white;margin-top: 30px; margin-left: 350px;}
-.doctor { width: 220px; height: 220px; background-color:#3d83df;border-radius: 300px; padding: 30px;color: white;margin-left: 350px;}
-.representative { width: 300px; height: 300px; background-color:#ababab ;border-radius: 20px; padding: 20px; color: white; margin-left: 100px;margin-top: 130px;}
+.div2{display: flex; justify-content: space-between; margin: auto; flex-wrap: nowrap;}
+
+.patient { width: 220px; height: 220px; background-color: #00ccb1 ; border-radius: 300px; color: white; text-align: center;}
+.icon{width: 40px; height: 40px; padding-top: 10px; }
+.doctor { width: 220px; height: 220px; background-color:#3d83df;border-radius: 300px; color: white; text-align: center;} 
+.representative { width: 250px; height: 250px; background-color:#ababab ;border-radius: 300px; color: white;text-align: center;}
 .icon{width: 40px; height: 40px; padding-top: 10px; padding-left: 0px;}
 .cible{text-decoration:underline; font-size: large; font-weight: bold;}

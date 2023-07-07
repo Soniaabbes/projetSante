@@ -11,14 +11,17 @@ function CardRdv() {
   
       const handdelete = async (id) => {
         if (window.confirm(" Êtes vous sûres?")) {
-          dispatch(deleteRdv(id));
+          dispatch(deleteRdv(id)
+        ) 
           dispatch(getRDVDoc(user?._id));
-        
+          window.location.reload();
+          
         }
-      };
+        };
+    
       useEffect(() => {
         dispatch(getRDVDoc(user?._id));
-     } ,[dispatch])
+     } ,[dispatch,user?._id])
 console.log(user?._id)
   return (
     <div style={{"display":'flex', "justifyContent":"space-between","flexWrap":'wrap', "marginTop":"25px","padding":"25px","marginBottom":"25px"}}>

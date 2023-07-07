@@ -70,7 +70,7 @@ export const authSlice = createSlice({
             state.user=null;
             state.auth=false;
             state.loading=false;
-          
+            localStorage.removeItem("token");
         }
     },
     extraReducers(builder) {

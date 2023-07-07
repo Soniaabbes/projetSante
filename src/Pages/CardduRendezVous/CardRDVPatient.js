@@ -12,11 +12,11 @@ function CardRDVPatient() {
   const dispatch= useDispatch()
   const rdvs= useSelector((state) => state.rdv.userRDV.appoinment); 
   const selectedRdv = useSelector((state) => state.rdv.rdvOne);
-  const searchname= useSelector((state)=>state.profile.searchname)
+
   useEffect(() => {
     dispatch(getEmailRDV(user?.email));
   
- } ,[dispatch])
+ } ,[dispatch,user?.email])
 const handEdit=()=>{
   const data={...selectedRdv, emailPa:"", valide: true}
  const payload = {
@@ -25,8 +25,9 @@ const handEdit=()=>{
  
 } ;  
 console.log(data,"eeee")
- dispatch( updateAppoinment(payload))
- if (data?.emailPa === "" && data ?.valide === true) {
+ dispatch( updateAppoinment(payload),
+ window.location.reload())
+ if (data?.emailPa === "" && data?.valide === true) {
   const email = {
     email:user?.email,
   }
@@ -37,13 +38,7 @@ console.log(data,"eeee")
 
   return (
     <div style={{"display":'flex', "justifyContent":"space-between","flexWrap":'wrap', "marginTop":"25px","padding":"25px"}} >
-    {rdvs.filter((rdv) =>
-          rdv.jour.toLowerCase().includes(searchname.toLowerCase().trim())
-        )
-    
-    
-    
-    ?.map(rdv=> 
+    {rdvs?.map(rdv=> 
  <Card style={{ width: '25rem' }}>
  <img src="https://cdn-icons-png.flaticon.com/256/5351/5351099.png" alt="Person" className="card__image"/>
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import { BsFillPersonCheckFill,BsFillPersonLinesFill,BsCalendarHeart}from "react-icons/bs";
+import { BsFillPersonCheckFill,BsCalendarHeart}from "react-icons/bs";
 import './Apropos.css'
 
 function Apropos() {
@@ -12,12 +12,12 @@ function Apropos() {
 </p>
     </div>
     <div className='div2'>
-      <p className='patientDoc'>
+     
       <p className='patient'> <BsFillPersonCheckFill className='icon'/> <br/> <span className='cible'>Pour les patients</span><br/>
       Trouvez un médecin, réservez une visite et résolvez tout doute lié à la santé</p>
-<p className='doctor'> <BsCalendarHeart className='icon'/> <br/> <span className='cible'>Pour les médecins,  </span>
+<p className='doctor'> <BsCalendarHeart className='icon'/> <br/> Pour les médecins, <br/> 
 Gagnez du temps dans la gestion des visites </p>
-</p>
+
 <p className='representative'><BsFillPersonCheckFill className='icon'/> <br/> <span className='cible'> Pour les commerciaux pharmaceutiques</span> <br/> Nous proposons un espace de vente de matériel médical pour les professionnels de santé et les patients<br/> 
 <br/> </p>
 

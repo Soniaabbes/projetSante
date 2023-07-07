@@ -39,7 +39,7 @@ function EditRdv() {
 
       <Modal show={show} onHid>
         <Modal.Header closeButton>
-          <Modal.Title>Ma fiche du RDV</Modal.Title>
+          <Modal.Title>Les rendez-vous qui auront lieu cette semaine:</Modal.Title>
         </Modal.Header>
         <Modal.Body>
         

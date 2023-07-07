@@ -8,7 +8,7 @@ routere.get("/getAllAppoinment", getAllAppoinment)
 //create new appoiment
 routere.post('/createAppoinment', isAuth,appointmentRules, createAppoinment)
 // update appoinment
-routere.put('/updateAppoinment/:id',updateAppoinment)
+routere.put('/updateAppoinment/:id',isAuth, updateAppoinment)
 //update la valeur de valideen en false 
 
 routere.put('/updateValide/:id',updateValide)

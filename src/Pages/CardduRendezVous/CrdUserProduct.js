@@ -21,6 +21,7 @@ function CrdUserProduct() {
     const handledelete = async (id) => {
         if (window.confirm(" Êtes vous sûres?")) {
             dispatch(deleteProduct(oneProduct?._id));
+            window.location.reload();
             dispatch(getProductUser(user._id));
         }
     };

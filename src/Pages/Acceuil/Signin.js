@@ -27,19 +27,20 @@ function Signin() {
     }
     useEffect(() => {
         if (user) { console.log(user.role,'role')
-            if (user.role == 'admin') {
+            if (user.role === 'admin') {
                 navigate('/profilAdmin')
             } else {
-                if (user.metier == 'patient') {
+                if (user.metier === 'patient') {
                     navigate('/RDV')
-                } else if (user.metier =="médecin") {
+                } else if (user.metier ==="médecin") {
                     navigate("/profileMedecin")
-                } else {
-                    navigate('/profilCommercialPharm')
+                } else if  (user.metier==="commercial pharmaceutique"){
+                    navigate('/profilCommercialPharm')}
                 }
-            }
+
+            
         }
-    }, [user])
+    }, [user, navigate])
     return (
         <div>
             <div className="form-comp cfb">
@@ -55,7 +56,7 @@ function Signin() {
                     <label>
                         Password:
                         <br/>
-                        <input name='password'
+                        <input type='password' name='password'
                             onChange={handleChange}/>
                     </label>
                     <br/>
